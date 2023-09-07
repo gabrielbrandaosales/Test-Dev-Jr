@@ -3,6 +3,7 @@ import ItemProduct from '../ItemProduct';
 import { Item } from './style';
 import useFetch from '../../hooks/useFetch';
 import { GET_SEARCH } from '../../api';
+import ItemProductSkeleton from '../ItemProductSkeleton';
 
 const Search = () => {
   const [search, setSearch] = useState('');
@@ -14,6 +15,7 @@ const Search = () => {
       <input
         className="inputFilter"
         value={search}
+        placeholder="Pesquisar produtos"
         onChange={({ target }) => setSearch(target.value)}
         type="text"
       />
